@@ -21,7 +21,6 @@ class InvoicePositionDaoTest {
         Invoice.InvoicePosition invoicePosition = new Invoice.InvoicePosition(491, 234234, 19, 60);
         dao.create(invoicePosition);
         assertEquals(invoicePosition, dao.read(234234, 60));
-        dao.delete(invoicePosition);
     }
 
     @Test
@@ -37,7 +36,6 @@ class InvoicePositionDaoTest {
         Invoice.InvoicePosition invoicePosition1 = new Invoice.InvoicePosition(491, 234234, 21, 67);
         dao.update(invoicePosition1);
         assertEquals(invoicePosition1, dao.read(234234, 67));
-        dao.delete(invoicePosition1);
     }
 
     @Test

@@ -21,7 +21,6 @@ class ProductDaoTest {
         Product product = new Product("test", 666);
         dao.create(product);
         assertEquals(product, dao.read(product.getInnerCode()));
-        dao.delete(product);
     }
 
     @Test
@@ -32,18 +31,16 @@ class ProductDaoTest {
 
     @Test
     void update() {
-        Product product = new Product("test", 666);
+        Product product = new Product("test1", 667);
         dao.create(product);
-        Product product1 = new Product("test2", 666);
+        Product product1 = new Product("test2", 667);
         dao.update(product1);
         assertEquals(product1, dao.read(product1.getInnerCode()));
-        dao.delete(product1);
     }
 
     @Test
     void delete() {
-        Product product = new Product("test", 666);
-        dao.create(product);
+        Product product = new Product("test2", 666);
         dao.delete(product);
         assertNotEquals(product, dao.read(product.getInnerCode()));
     }

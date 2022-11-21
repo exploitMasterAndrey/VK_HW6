@@ -22,15 +22,12 @@ class OrganizationDaoTest {
         Organization organization = new Organization("test", 11l, 666);
         dao.create(organization);
         assertEquals(organization, dao.read(organization.getINN().intValue()));
-        dao.delete(organization);
     }
 
     @Test
     void read() {
         Organization organization = new Organization("test", 11l, 666);
-        dao.create(organization);
-        assertEquals(organization, dao.read(organization.getINN().intValue()));
-        dao.delete(organization);
+        assertEquals(organization, dao.read((int)11l));
     }
 
     @Test
@@ -40,7 +37,6 @@ class OrganizationDaoTest {
         Organization organization1 = new Organization("test1", 111222333l, 666);
         dao.update(organization1);
         assertEquals(organization1, dao.read(organization1.getINN().intValue()));
-        dao.delete(organization1);
     }
 
     @Test
