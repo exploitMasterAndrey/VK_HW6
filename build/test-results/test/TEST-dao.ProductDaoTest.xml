@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="dao.ProductDaoTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-11-21T09:48:42" hostname="DESKTOP-OQ9HF9O" time="0.232">
+<testsuite name="dao.ProductDaoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-21T10:28:12" hostname="DESKTOP-OQ9HF9O" time="0.224">
   <properties/>
-  <testcase name="create()" classname="dao.ProductDaoTest" time="0.217"/>
-  <testcase name="delete()" classname="dao.ProductDaoTest" time="0.006"/>
-  <testcase name="update()" classname="dao.ProductDaoTest" time="0.006"/>
-  <testcase name="read()" classname="dao.ProductDaoTest" time="0.001"/>
+  <testcase name="all()" classname="dao.ProductDaoTest" time="0.224"/>
   <system-out><![CDATA[Migrations applied successfully
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

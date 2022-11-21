@@ -3,7 +3,10 @@ package dao;
 import db_migration.DBCreator;
 import model.Product;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -14,6 +17,16 @@ class ProductDaoTest {
     static void beforeAll() {
         dao = new ProductDao();
         DBCreator.init();
+    }
+
+    @Test
+    void all(){
+        List<Product> productList = List.of(new Product("1_product", 234234),
+                new Product("2_product", 275124),
+                new Product("3_product", 289541),
+                new Product("4_product", 888563));
+
+        assertArrayEquals(productList.toArray(), dao.all().toArray());
     }
 
     @Test
